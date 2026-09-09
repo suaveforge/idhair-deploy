@@ -15,13 +15,28 @@
   <meta property="og:url" content="https://idhair.suaveforge.com/">
   <meta property="og:site_name" content="SuaveForge">
   <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "idHAIR 고객 설문·운영 관리 시스템",
+    "alternateName": "idHAIR",
+    "url": "https://idhair.suaveforge.com/",
+    "applicationCategory": "BusinessApplication",
+    "description": "미용실 고객 설문과 지점·디자이너별 고객 데이터, 설문 양식, QR, 내보내기, 백업과 감사 로그를 관리하는 웹 서비스",
+    "publisher": {"@type":"Organization","name":"idHAIR"}
+  }
+  </script>
   <script async src="https://sitehub.suaveforge.com/analytics-loader.js" data-sitehub-project="p03"></script>
   <style>
     html, body, #idhair-app { width: 100%; height: 100%; margin: 0; }
     body { overflow: hidden; background: #f7f5f1; font-family: system-ui, -apple-system, "Noto Sans KR", sans-serif; }
     #idhair-app { display: block; border: 0; background: #fff; }
     #idhair-app[hidden], #status[hidden] { display: none !important; }
-    #status { position: fixed; inset: 0; display: grid; place-items: center; padding: 24px; font-size: 16px; text-align: center; color: #3e454b; background: #f7f5f1; z-index: 2; }
+    #status { position: fixed; inset: 0; display: grid; place-items: center; padding: 24px; font-size: 16px; text-align: center; color: #3e454b; background: #f7f5f1; z-index: 2; overflow: auto; }
+    #status-copy { max-width: 760px; line-height: 1.65; }
+    #status-copy h1 { margin: 0 0 14px; font-size: 24px; line-height: 1.35; }
+    #status-copy p { margin: 8px 0; }
   </style>
   <script>
     (() => {
@@ -43,7 +58,14 @@
   </script>
 </head>
 <body>
-  <div id="status">idHAIR 설문 시스템에 연결하고 있습니다.</div>
+  <div id="status">
+    <main id="status-copy">
+      <h1>idHAIR 고객 설문·운영 관리 시스템</h1>
+      <p>idHAIR는 미용실 고객 설문을 태블릿·모바일·PC에서 운영하고, 지점과 디자이너별 고객 응답 데이터를 한곳에서 관리하는 웹 서비스입니다. 설문 양식 관리, QR 설문 연결, 응답 조회, XLSX 내보내기, 권한 관리, 백업과 감사 로그까지 실제 매장 운영에 필요한 흐름을 통합해 제공합니다.</p>
+      <p><strong>사용 방법:</strong> 시스템 연결이 완료되면 설문을 시작하거나 관리자 화면에서 지점·디자이너별 응답과 설문 양식을 확인할 수 있습니다. 고객은 안내된 설문 링크나 QR로 참여하고, 관리자는 수집된 결과를 조회·정리·내보내기 할 수 있습니다.</p>
+      <p>서비스 소개, 이용 방법, 계정·설문 운영 관련 도움말이나 지원이 필요한 경우 idHAIR 운영 담당자에게 문의해 주세요. 지금 시스템에 연결하고 있습니다.</p>
+    </main>
+  </div>
   <iframe id="idhair-app" title="idHAIR 고객 설문" hidden></iframe>
   <script src="config.js"></script>
   <script>
